@@ -75,7 +75,7 @@ function orderForm() {
   for (var i = 0; i < 6; i++) {
     var label = document.createElement('label');
     label.textContent = labelInput[i];
-    var input = document.createElement('input');
+    var input = document.createElement('input');  
     input.setAttribute('type', 'text');
      //Render form to 2nd section with class deck
     div.appendChild(label);

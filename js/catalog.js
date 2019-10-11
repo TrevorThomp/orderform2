@@ -73,6 +73,10 @@ function updateCartPreview() {
 // Call that handleSubmit method above and kick off the whole process
 var catalogForm = document.getElementById('catalog');
 catalogForm.addEventListener('submit', handleSubmit);
+catalogForm.addEventListener('submit', function() {
+  var quantity = document.getElementById('quantity');
+  quantity.value = '';
+})
 
 // Before anything else of value can happen, we need to fill in the select
 // drop down list in the form.
