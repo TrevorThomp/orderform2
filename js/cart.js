@@ -6,6 +6,8 @@ var table = document.getElementById('cart');
 table.addEventListener('click', removeItemFromCart);
 var cart;
 
+orderForm();
+
 function loadCart() {
   var cartItems = JSON.parse(localStorage.getItem('cart')) || [];
   cart = new Cart(cartItems);
@@ -16,7 +18,6 @@ function renderCart() {
   loadCart();
   clearCart();
   showCart();
-  orderForm();
 }
 
 // TODO: Remove all of the rows (tr) in the cart table (tbody)
@@ -69,7 +70,7 @@ function removeItemFromCart(event) {
   renderCart();
 }
 
-function orderForm(event) {
+function orderForm() {
   var section = document.getElementsByClassName('deck')[1];
   var div = document.createElement('div');
   div.setAttribute('id', 'order-form');
@@ -101,5 +102,16 @@ function orderForm(event) {
 
 }
 
+function resetCart(e) {
+  var Table = document.getElementById('cart');
+  Table.innerHTML = "";
+}
+
+var button = document.getElementById('submit-button');
+console.log(button)
+button.addEventListener('click', resetCart);
+
+
 // This will initialize the page and draw the cart on screen
 renderCart();
+
