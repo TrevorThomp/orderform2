@@ -3,6 +3,7 @@
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
  }
+
  body {
   width: 75%;
   align-content: center;
@@ -10,10 +11,12 @@
   font-family: Arial, Helvetica, sans-serif;
   background-color: #ddd;
  }
+
  nav {
   overflow: hidden;
   background-color: #333;
  }
+
  /* Navbar links */
  nav a {
   float: left;
@@ -23,14 +26,17 @@
   padding: 14px 16px;
   text-decoration: none;
  }
+
  /* Links - change color on hover */
  nav a:hover {
   background-color: #ddd;
   color: black;
  }
+
  .card h1 {
   font-size: 32px;
  }
+ 
  header h1 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
  font-size: 45px;
@@ -99,6 +105,8 @@
 
 img {
   width: 15%;
+  margin: 0 auto;
+  margin-top: 10px;
 }
 
  .remove:hover {
@@ -139,7 +147,6 @@ input[type='submit'] {
  span {
    margin: 5px;
  }
-
 
  #order-form {
    display: flex;
