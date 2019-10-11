@@ -36,7 +36,7 @@
  .card h1 {
   font-size: 32px;
  }
- 
+
  header h1 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
  font-size: 45px;
@@ -80,25 +80,30 @@
 
   text-shadow: 1px 1px #8f8f8f;
  }
+
  #cartContents li {
   background-color: #5F9FA5;
   width: 530px;
   font-size: 20px;
   margin: auto;
  }
+
  table {
   border-collapse: collapse;
   width: 50%;
  }
+
  table, th, td {
   padding: 25px;
   margin: auto;
   border: 1px solid black;
   background-color: #f2f2f2;
  }
+
  thead {
   font-size: 20px;
  }
+
  span {
   color: #ddd;
  }
@@ -135,10 +140,12 @@ input[type='submit'] {
      text-shadow:0px 1px 0px #854629;
      margin-left: 10px;
  }
+
  input [type="submit"]:hover {
      background:linear-gradient(to bottom, #bc3315 5%, #d0451b 100%);
      background-color:#bc3315;
  }
+ 
  input [type="submit"]:active {
      position:relative;
      top:1px;
