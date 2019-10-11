@@ -73,7 +73,7 @@ function orderForm(event) {
   var section = document.getElementsByClassName('deck')[1];
   var div = document.createElement('div');
   div.setAttribute('id', 'order-form');
-  var labelInput = ['First Name:', 'Last Name:', 'Street:', 'City:', 'State:', 'Zip Code:', 'Phone Number:', 'Credit Card Number:']
+  var labelInput = ['First Name:', 'Last Name:', 'Street:', 'City:', 'State:', 'Zip Code:', 'Phone Number:', 'Credit Card Number:'];
   // Create order form
   for (var i = 0; i < 6; i++) {
     var label = document.createElement('label');
@@ -95,8 +95,10 @@ function orderForm(event) {
   div.appendChild(input);
   // Submit Order Button
   input = document.createElement('input');
+  input.setAttribute('id', 'submit-button');
   input.setAttribute('type', 'submit');
   div.appendChild(input);
+
 }
 
 // This will initialize the page and draw the cart on screen
