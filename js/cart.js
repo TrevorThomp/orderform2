@@ -6,8 +6,6 @@ var table = document.getElementById('cart');
 table.addEventListener('click', removeItemFromCart);
 var cart;
 
-orderForm();
-
 function loadCart() {
   var cartItems = JSON.parse(localStorage.getItem('cart')) || [];
   cart = new Cart(cartItems);
@@ -20,6 +18,8 @@ function renderCart() {
   showCart();
 }
 
+orderForm();
+
 // TODO: Remove all of the rows (tr) in the cart table (tbody)
 function clearCart() {
   while (table.rows.length > 0) {
@@ -29,7 +29,6 @@ function clearCart() {
 
 // TODO: Fill in the <tr>'s under the <tbody> for each item in the cart
 function showCart() {
-
   // TODO: Find the table body
   var tableBody = document.querySelector('tbody');
   // TODO: Iterate over the items in the cart
@@ -54,12 +53,9 @@ function showCart() {
     td.setAttribute('class', 'remove');
     tr.appendChild(td);
   }
- 
-
 }
 
 function removeItemFromCart(event) {
-
   // TODO: When a delete link is clicked, use cart.removeItem to remove the correct item
   if (event.target.textContent === 'X') {
     cart.removeItem(event.target.parentElement);
@@ -95,22 +91,15 @@ function orderForm() {
   div.appendChild(label);
   div.appendChild(input);
   // Submit Order Button
-  input = document.createElement('input');
+  input = document.createElement('button');
   input.setAttribute('id', 'submit-button');
-  input.setAttribute('type', 'submit');
+  input.textContent = 'Process Order';
   div.appendChild(input);
 
 }
 
-function resetCart(e) {
-  var Table = document.getElementById('cart');
-  Table.innerHTML = "";
-}
-
 var button = document.getElementById('submit-button');
-console.log(button)
-button.addEventListener('click', resetCart);
-
+button.addEventListener('click', clearCart);
 
 // This will initialize the page and draw the cart on screen
 renderCart();
