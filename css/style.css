@@ -1,0 +1,136 @@
+/* TODO: Make it awesome */ 
+* {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+ }
+ body {
+  width: 1020px;
+  align-content: center;
+  margin: auto;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ddd;
+ }
+ nav {
+  overflow: hidden;
+  background-color: #333;
+ }
+ /* Navbar links */
+ nav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+ }
+ /* Links - change color on hover */
+ nav a:hover {
+  background-color: #ddd;
+  color: black;
+ }
+ .card h1 {
+  font-size: 32px;
+ }
+ header h1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+ font-size: 45px;
+ text-shadow: 2px 3px #8f8f8f;
+ margin-bottom: 10px;
+ }
+
+ fieldset {
+  position: relative;
+  padding: 50px;
+  width: 500px;
+  background-color: #013C41;
+  margin: auto;
+ }
+
+ #catalog {
+   margin-top: 30px;
+   margin-bottom: 10px;
+ }
+
+ nav {
+   position: relative;
+ }
+
+ #itemCount {
+   float: right;
+   vertical-align: center;
+   padding: 10px;
+ }
+
+.card {
+  margin: 10px 0;
+}
+
+ legend {
+   position: absolute;
+  top: 10px;
+   left: 240px;
+  color: white;
+  font-size: 25px;
+
+  text-shadow: 1px 1px #8f8f8f;
+ }
+ #cartContents li {
+  background-color: #5F9FA5;
+  width: 530px;
+  font-size: 20px;
+  margin: auto;
+ }
+ table {
+  border-collapse: collapse;
+ }
+ table, th, td {
+  padding: 15px;
+  margin: auto;
+  border: 1px solid black;
+  background-color: #f2f2f2;
+ }
+ thead {
+  font-size: 20px;
+ }
+ span {
+  color: #ddd;
+ }
+
+ .remove:hover {
+   cursor: pointer;
+ }
+
+input[type='submit'] {
+  width: 25%;
+}
+
+ /* button from https://www.bestcssbuttongenerator.com/#/9 */
+ input[type="submit"] {
+     box-shadow:inset 0px 1px 0px 0px #cf866c;
+     background:linear-gradient(to bottom, #d0451b 5%, #bc3315 100%);
+     background-color:#d0451b;
+     border-radius:3px;
+     border:1px solid #942911;
+     display:inline-block;
+     cursor:pointer;
+     color:#ffffff;
+     font-family:Arial;
+     font-size:13px;
+     padding:12px 24px;
+     text-decoration:none;
+     text-shadow:0px 1px 0px #854629;
+     margin-left: 10px;
+ }
+ input [type="submit"]:hover {
+     background:linear-gradient(to bottom, #bc3315 5%, #d0451b 100%);
+     background-color:#bc3315;
+ }
+ input [type="submit"]:active {
+     position:relative;
+     top:1px;
+ }
+
+ span {
+   margin: 5px;
+ }
+
