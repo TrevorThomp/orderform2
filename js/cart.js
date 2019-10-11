@@ -16,6 +16,7 @@ function renderCart() {
   loadCart();
   clearCart();
   showCart();
+  orderForm();
 }
 
 // TODO: Remove all of the rows (tr) in the cart table (tbody)
@@ -60,12 +61,30 @@ function removeItemFromCart(event) {
 
   // TODO: When a delete link is clicked, use cart.removeItem to remove the correct item
   if (event.target.textContent === 'X') {
-    cart.removeItem(event.target.parentElement.id);
+    cart.removeItem(event.target.parentElement);
   }
   // TODO: Save the cart back to local storage
   localStorage.setItem('cart', JSON.stringify(cart.items));
   // TODO: Re-draw the cart table
   renderCart();
+}
+
+function orderForm(event) {
+  var section = document.getElementsByClassName('.deck')[1];
+  var div = document.createElement('div');
+  div.setAttribute('id', 'order-form');
+  var labelInput = ['First Name:', 'Last Name:', 'Street:', 'City:', 'State:', 'Zip Code:', 'Phone Number:']
+  // Create order form
+  for (var i = 0; i < 6; i++) {
+    var label = document.createElement('label');
+    label.textContent = labelInput[i];
+    var input = document.createElement('input');
+    input.setAttribute('type', 'text');
+    div.appendChild(label);
+    div.appendChild(input);
+    section.appendChild(div);
+  }
+  //Render form to 2nd section with class deck
 }
 
 // This will initialize the page and draw the cart on screen
