@@ -70,21 +70,33 @@ function removeItemFromCart(event) {
 }
 
 function orderForm(event) {
-  var section = document.getElementsByClassName('.deck')[1];
+  var section = document.getElementsByClassName('deck')[1];
   var div = document.createElement('div');
   div.setAttribute('id', 'order-form');
-  var labelInput = ['First Name:', 'Last Name:', 'Street:', 'City:', 'State:', 'Zip Code:', 'Phone Number:']
+  var labelInput = ['First Name:', 'Last Name:', 'Street:', 'City:', 'State:', 'Zip Code:', 'Phone Number:', 'Credit Card Number:']
   // Create order form
   for (var i = 0; i < 6; i++) {
     var label = document.createElement('label');
     label.textContent = labelInput[i];
     var input = document.createElement('input');
     input.setAttribute('type', 'text');
+     //Render form to 2nd section with class deck
     div.appendChild(label);
     div.appendChild(input);
     section.appendChild(div);
   }
-  //Render form to 2nd section with class deck
+  // Credit Card Input
+  label = document.createElement('label');
+  label.textContent = labelInput[7];
+  input = document.createElement('input');
+  input.setAttribute('type', 'number');
+  input.setAttribute('pattern', '[0-9]{16}');
+  div.appendChild(label);
+  div.appendChild(input);
+  // Submit Order Button
+  input = document.createElement('input');
+  input.setAttribute('type', 'submit');
+  div.appendChild(input);
 }
 
 // This will initialize the page and draw the cart on screen
