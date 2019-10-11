@@ -36,6 +36,7 @@ var Product = function(filePath, name) {
   Product.allProducts.push(this);
 };
 Product.allProducts = [];
+console.log(Product.allProducts)
 
 function generateCatalog() {
   new Product('assets/bag.jpg', 'Bag');

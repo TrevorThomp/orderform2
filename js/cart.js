@@ -41,7 +41,14 @@ function showCart() {
     // TODO: Create a TD for the delete link, quantity,  and the item
     // TODO: Add the TR to the TBODY and each of the TD's to the TR
     var productTd = document.createElement('td');
+    var img = document.createElement('img');
     productTd.textContent = cart.items[i].product;
+    for (var j = 0; j < Product.allProducts.length; j++) {
+      if (Product.allProducts[j].name.toUpperCase() === cart.items[i].product.toUpperCase()) {
+        img.src = Product.allProducts[j].filePath;
+      };
+    }
+    tr.appendChild(img);
     tr.appendChild(productTd);
     
     var amountTd = document.createElement('td');
