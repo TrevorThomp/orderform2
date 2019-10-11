@@ -93,13 +93,22 @@ function orderForm() {
   // Submit Order Button
   input = document.createElement('button');
   input.setAttribute('id', 'submit-button');
-  input.textContent = 'Process Order';
+  input.textContent = 'Process Order';  
   div.appendChild(input);
+}
 
+function overLayMessage() {
+  var body = document.querySelector('body');
+  var div = document.createElement('div');
+  div.setAttribute('id', 'overlay');
+  div.style.display = 'block';
+  div.innerHTML = `<p> Your order has been submitted! </p>`;
+  body.appendChild(div);
 }
 
 var button = document.getElementById('submit-button');
 button.addEventListener('click', clearCart);
+button.addEventListener('click', overLayMessage);
 
 // This will initialize the page and draw the cart on screen
 renderCart();
